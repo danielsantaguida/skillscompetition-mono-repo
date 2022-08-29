@@ -9,7 +9,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-namespace Managers
+namespace Scripts.Managers
 {
     public class GameManager : MonoBehaviour
     {

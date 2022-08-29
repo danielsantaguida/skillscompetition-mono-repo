@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using ScriptableObjects;
-using UI;
+using Scripts.UI;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UIElements;
 
-namespace Managers
+namespace Scripts.Managers
 {
     public class ThemeManager : MonoBehaviour
     {

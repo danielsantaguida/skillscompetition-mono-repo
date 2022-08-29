@@ -2,8 +2,8 @@
     <Style src="../Styles/Menu.uss" />
     <ui:Template name="StartPage" src="StartPage.uxml" />
     <ui:Template name="OptionsPage" src="OptionsPage.uxml" />
-    <UI.MainMenuManager class="menu menu-bg">
+    <Scripts.UI.MainMenuManager class="menu menu-bg">
         <ui:Instance template="StartPage" name="start-page" class="menu"/>
         <ui:Instance template="OptionsPage" name="options-page" class="menu" style="display: none"/>
-    </UI.MainMenuManager>
+    </Scripts.UI.MainMenuManager>
 </ui:UXML> 

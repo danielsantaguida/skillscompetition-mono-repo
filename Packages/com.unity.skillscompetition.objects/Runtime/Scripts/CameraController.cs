@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UI;
+using Scripts.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

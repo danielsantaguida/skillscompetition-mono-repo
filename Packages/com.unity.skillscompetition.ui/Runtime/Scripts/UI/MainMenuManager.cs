@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-namespace UI
+namespace Scripts.UI
 {
     public class MainMenuManager : VisualElement
     {

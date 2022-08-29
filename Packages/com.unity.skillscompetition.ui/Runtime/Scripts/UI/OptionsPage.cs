@@ -10,7 +10,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-namespace UI
+namespace Scripts.UI
 {
 
     public class OptionsPage : VisualElement

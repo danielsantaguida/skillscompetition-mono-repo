@@ -6,10 +6,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-namespace Managers
+namespace Scripts.Managers
 {
-
-
     public class UIManager : MonoBehaviour
     {
         private Label _mShotClock;
