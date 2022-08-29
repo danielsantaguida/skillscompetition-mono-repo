@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="../Styles/Stats.uss" />
+    <ui:Template name="EndPage" src="EndPage.uxml" />
+    <ui:VisualElement class="stats-screen">
+        <ui:Label class="shot-clock"/>
+        <ui:Label name="shot-clock" text="24" class="shot-clock"/>
+        <ui:Label name="points-label" text="Points: 99" class="points-label"/>
+    </ui:VisualElement>
+    <ui:Instance template="EndPage" name="end-page" class="end-screen" style="display: none;"/>
+</ui:UXML>

@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="../Styles/EndPage.uss" />
+    <ui:VisualElement class="end-page theme">
+        <ui:Label name="high-score-label" text="High Score: 99" class="score-label"/>
+        <ui:Label name="player-score-label" text="Your Score: 99" class="score-label"/>
+        <ui:Button name="menu-button" text="Main Menu" class="menu-button theme"/>
+    </ui:VisualElement>
+</ui:UXML>

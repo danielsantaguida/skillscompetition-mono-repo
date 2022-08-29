@@ -1,0 +1,37 @@
+VisualElement {
+}
+
+.start-page {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 90%;
+    width: 85%;
+}
+
+.button {
+    background-image: url('../Textures/Button Frame Wide Design 2.png');
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    width: 100%;
+    padding: 10%;
+    margin: 5%;
+    font-size: 250%;
+    color: white;
+}
+
+.button-container {
+    width: 20%;
+    height: 40%;
+    margin-right: 8.5%;
+}
+
+.button:hover {
+    opacity: 0.6;
+}
+
+.logo {
+    background-image: url('../Textures/Skills Competition-1.png');
+    width: 35%;
+    flex-grow: 1;
+}

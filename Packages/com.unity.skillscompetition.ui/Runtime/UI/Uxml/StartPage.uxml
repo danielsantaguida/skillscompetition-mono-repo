@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="../Styles/StartPage.uss" />
+    <ui:VisualElement name="start-page" class="menu start-page"> 
+        <ui:VisualElement class="logo"/>
+        <ui:VisualElement class="button-container">
+            <ui:Button name="start-button" text="Start" class="button theme"/>
+            <ui:Button name="options-button" text="Options" class="button theme"/>
+            <ui:Button name="exit-button" text="Exit" class="button theme"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

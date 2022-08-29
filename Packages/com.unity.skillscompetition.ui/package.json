@@ -1,0 +1,15 @@
+{
+  "name": "com.unity.skillscompetition.ui",
+  "version": "1.0.0",
+  "displayName": "Skills Competition UI",
+  "description": "UI for the skills competition game",
+  "author": {
+    "name": "Daniel Santaguida",
+    "email": "daniel.santaguida@unity3d.com",
+    "url": "https://www.unity3d.com"
+  },
+  "dependencies": {
+    "com.unity.addressables": "1.19.19",
+    "com.unity.render-pipelines.universal": "12.1.7"
+  }
+}

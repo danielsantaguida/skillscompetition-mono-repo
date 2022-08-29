@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b8eb1c642a4b347b70754b44c7962a, type: 3}
+  m_Name: Mavericks
+  m_EditorClassIdentifier: 
+  color: {r: 0.033018887, g: 0.6776733, b: 1, a: 0}
+  logo: {fileID: 2800000, guid: c8502eb772f776448882dd8cd457325c, type: 3}
+  styleSheet: {fileID: 7433441132597879392, guid: 091e5d6965142684596ceebb02454c37,
+    type: 3}
