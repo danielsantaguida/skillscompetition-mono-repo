@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -120,7 +120,7 @@ namespace Scripts.UI
             QualitySettings.SetQualityLevel(QualitySettings.names.ToList().IndexOf(qualitySetting));
         }
 
-        private void SetQuality(AsyncOperationHandle<UniversalRenderPipelineAsset> obj)
+        private void SetQuality(AsyncOperationHandle<RenderPipelineAsset> obj)
         {
             if (obj.Status == AsyncOperationStatus.Failed)
             {
