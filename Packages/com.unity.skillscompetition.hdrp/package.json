@@ -1,0 +1,14 @@
+{
+  "name": "com.unity.skillscompetition.hdrp",
+  "version": "1.0.0",
+  "displayName": "Skills Competition HDRP Assets",
+  "description": "HDRP assets for the skills competition",
+  "author": {
+    "name": "Daniel Santaguida",
+    "email": "daniel.santaguida@unity3d.com",
+    "url": "https://www.unity3d.com"
+  },
+  "dependencies": {
+    "com.unity.render-pipelines.high-definition": "12.1.7"
+  }
+}

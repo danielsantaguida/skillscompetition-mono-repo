@@ -11,3 +11,4 @@ This game was created to practice the following concepts:
 6. Profiler
 7. Packages
 8. Mono Repo
+9. HDRP
