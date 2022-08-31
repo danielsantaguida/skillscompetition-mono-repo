@@ -191,6 +191,14 @@
         "com.unity.searcher": "4.9.1"
       }
     },
+    "com.unity.skillscompetition.hdrp": {
+      "version": "file:../../../../Packages/com.unity.skillscompetition.hdrp",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.render-pipelines.high-definition": "12.1.7"
+      }
+    },
     "com.unity.skillscompetition.objects": {
       "version": "file:../../../../Packages/com.unity.skillscompetition.objects",
       "depth": 0,
