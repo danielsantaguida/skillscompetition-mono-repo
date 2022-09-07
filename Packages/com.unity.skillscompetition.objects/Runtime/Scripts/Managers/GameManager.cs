@@ -37,7 +37,7 @@ namespace Scripts.Managers
         
         private const string HighScoreKey = "highScore";
 
-        void Awake()
+        void Start()
         {
             _mPoints = 0;
             _mGameOver = false;
@@ -49,10 +49,7 @@ namespace Scripts.Managers
             
             Addressables.LoadAssetAsync<GameObject>(BallReference).Completed += OnBallLoaded;
             Addressables.LoadAssetAsync<GameObject>(TargetReference).Completed += OnTargetLoaded;
-        }
 
-        void Start()
-        {
             CameraController.SetCursorLock(true, false, CursorLockMode.Locked);
         }
 

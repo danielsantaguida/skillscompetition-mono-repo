@@ -6,14 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Packages/com.unity.skillscompetition.objects/Runtime/Scenes/Menu.unity
     guid: 9051907c0c4d8a045b24e4e7c3be9fb9
   - enabled: 1
-    path: Assets/Scenes/PassingChallenge.unity
+    path: Packages/com.unity.skillscompetition.objects/Runtime/Scenes/PassingChallenge.unity
     guid: 11be48d59b93d6645a02afaddf8bf155
-  - enabled: 1
-    path: Packages/com.unity.skillscompetition.objects/Runtime/BaseScene/MenuSync.unity
-    guid: d26fe659f7120c544ab066f8da817b45
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: affde2493ef6e9e41aff25d60d0765de,
       type: 2}
