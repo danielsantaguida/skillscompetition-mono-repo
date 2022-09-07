@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: LightingScene
+  m_EditorClassIdentifier: 
+  m_GroupName: LightingScene
+  m_Data:
+    m_SerializedData: []
+  m_GUID: bb5ac40925ec66044af4051237c4620c
+  m_SerializeEntries:
+  - m_GUID: aa4e6e0d348d0724dbedd027c53e59fa
+    m_Address: LightingScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 80227c3613770b24bb08bf6c5c77af22, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: feddaa8987090dc469fb68b9a4763e3d, type: 2}
+    - {fileID: 11400000, guid: b2c2dee8704c4734d98c9c1b2b404a0a, type: 2}

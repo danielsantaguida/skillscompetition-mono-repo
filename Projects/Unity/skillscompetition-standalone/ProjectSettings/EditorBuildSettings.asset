@@ -10,7 +10,10 @@ EditorBuildSettings:
     guid: 9051907c0c4d8a045b24e4e7c3be9fb9
   - enabled: 1
     path: Packages/com.unity.skillscompetition.objects/Runtime/Scenes/PassingChallenge.unity
-    guid: 11be48d59b93d6645a02afaddf8bf155
+    guid: 7428542063e2175428533eaf987f7a50
+  - enabled: 0
+    path: Assets/Scenes/PassingChallengeLighting.unity
+    guid: 1061e3a874aa3ec488d9718f1fb277bf
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: affde2493ef6e9e41aff25d60d0765de,
       type: 2}
