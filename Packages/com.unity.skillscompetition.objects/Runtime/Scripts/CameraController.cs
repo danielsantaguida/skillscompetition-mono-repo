@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
     public static Action<bool, bool, CursorLockMode> SetCursorLock;
     public static Action<InputAction.CallbackContext> Look;
 
-    void Start()
+    void Awake()
     {
         _mCameraEnabled = true;
         _mSensitivity = PlayerPrefs.GetInt(OptionsPage.PlayerPrefsSensitivityKey) / 100f;
