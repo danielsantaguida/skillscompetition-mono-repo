@@ -20,6 +20,7 @@ namespace Scripts.Managers
 
         public InputAction mFireAction;
         public InputAction mLookAction;
+        public InputAction mPauseAction;
         
         void Start()
         {
@@ -34,6 +35,7 @@ namespace Scripts.Managers
 
         public void SwitchState(GameState state)
         {
+            _currentState.Exit();
             _currentState = state;
             _currentState.Enter();
         }

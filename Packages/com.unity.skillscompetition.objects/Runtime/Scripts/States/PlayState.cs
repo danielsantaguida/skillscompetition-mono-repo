@@ -1,5 +1,8 @@
+using System;
 using Scripts.Managers;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 namespace Scripts.States
 {
@@ -14,9 +17,11 @@ namespace Scripts.States
         public override void Enter()
         {
             Context.mBasketball.OnScore += IncreaseScore;
-
+            Context.mPauseAction.performed += PauseGame;
+#if PLATFORM_ANDROID
+            UIManager.PauseGame += PauseGame;
+#endif
             _targetZoneBounds = Context.mTargetZone.bounds;
-            RandomTargetPosition();
         }
         
         public override void Update()
@@ -28,7 +33,26 @@ namespace Scripts.States
             
             UIManager.SetShotClock(Context.TimeLeft);
         }
-        
+
+        public override void Exit()
+        {
+            Context.mPauseAction.performed -= PauseGame;
+#if PLATFORM_ANDROID
+            UIManager.PauseGame -= PauseGame;
+#endif
+        }
+
+        private void PauseGame(InputAction.CallbackContext ctx)
+        {
+            PauseGame();
+        }
+
+        private void PauseGame()
+        {
+            Context.SwitchState(new PauseState(Context));
+
+        }
+
         private void IncreaseScore(bool hasBounced)
         {
             Context.Points += hasBounced ? 2 : 1;

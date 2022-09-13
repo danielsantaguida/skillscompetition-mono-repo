@@ -33,7 +33,11 @@ namespace Scripts.States
         public override void Update()
         {
         }
-        
+
+        public override void Exit()
+        {
+        }
+
         private void DisableInputActions()
         {
             Context.mFireAction.Disable();

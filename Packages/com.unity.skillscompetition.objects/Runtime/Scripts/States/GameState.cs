@@ -9,7 +9,7 @@ namespace Scripts.States
     public abstract class GameState
     {
 
-        protected GameStateManager Context;
+        protected readonly GameStateManager Context;
 
         protected GameState(GameStateManager context)
         {
@@ -18,5 +18,6 @@ namespace Scripts.States
 
         public abstract void Enter();
         public abstract void Update();
+        public abstract void Exit();
     }
 }

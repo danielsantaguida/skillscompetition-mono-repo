@@ -41,6 +41,10 @@ namespace Scripts.States
                 Context.SwitchState(new PlayState(Context));
         }
 
+        public override void Exit()
+        {
+        }
+
         private void OnBallLoaded(AsyncOperationHandle<GameObject> obj)
         {
             if (obj.Status == AsyncOperationStatus.Failed)
@@ -71,10 +75,14 @@ namespace Scripts.States
         
         private void SetupInputActions()
         {
-            Context.mFireAction = new InputAction(binding: "<Mouse>/leftButton");
+            Context.mFireAction = new InputAction(binding: "<Touchscreen>/primaryTouch/tap");
+            Context.mFireAction.AddBinding(new InputBinding("<Mouse>/leftButton"));
+            
             Context.mLookAction = new InputAction(binding: "<Pointer>/delta");
+            Context.mPauseAction = new InputAction(binding: "<Keyboard>/escape");
             
             Context.mLookAction.performed += ctx => CameraController.Look(ctx);
+            Context.mPauseAction.Enable();
             Context.mLookAction.Enable();
             Context.mFireAction.Enable();
         }

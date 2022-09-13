@@ -13,6 +13,7 @@ namespace Scripts.Managers
         private Label _mShotClock;
         private Label _mPointsLabel;
         private VisualElement _mEndScreen;
+        private VisualElement _pauseScreen;
 
         [SerializeField] private UIDocument m_UIDocument;
 
@@ -20,19 +21,41 @@ namespace Scripts.Managers
         public static Action<float> SetShotClock;
         public static Action<int, int> DisplayEndUI;
         public static Action<StyleSheet> SetStyleSheet;
+        public static Action DisplayPauseUI;
+        public static Action HidePauseUI;
+        public static Action ResumeGame;
+#if PLATFORM_ANDROID
+        public static Action PauseGame;
+
+#endif
 
         void Awake()
         {
             _mShotClock = m_UIDocument.rootVisualElement.Q<Label>("shot-clock");
             _mPointsLabel = m_UIDocument.rootVisualElement.Q<Label>("points-label");
             _mEndScreen = m_UIDocument.rootVisualElement.Q("end-page");
+            _pauseScreen = m_UIDocument.rootVisualElement.Q("pause-screen");
+
+#if PLATFORM_STANDALONE
+            var pauseContainer = m_UIDocument.rootVisualElement.Q("pause-container");
+            pauseContainer.style.display = DisplayStyle.None;
+#else
+            var placeholder = m_UIDocument.rootVisualElement.Q("placeholder");
+            placeholder.style.display = DisplayStyle.None;
+                
+            var pauseButton = m_UIDocument.rootVisualElement.Q("pause-button");
+            pauseButton.RegisterCallback<ClickEvent>(ev => PauseGame());
+#endif
             
             _mEndScreen.Q<Button>("menu-button").RegisterCallback<ClickEvent>(ev => LoadMainMenu());
+            _pauseScreen.Q<Button>("resume-button").RegisterCallback<ClickEvent>(ev => ResumeGame());
 
             SetPoints += OnSetPoints;
             SetShotClock += OnSetShotClock;
             DisplayEndUI += OnDisplayEndUI;
             SetStyleSheet += OnSetStyleSheet;
+            DisplayPauseUI += OnDisplayPauseUI;
+            HidePauseUI += OnHidePauseUI;
         }
 
         private void OnSetShotClock(float time)
@@ -56,6 +79,16 @@ namespace Scripts.Managers
             _mEndScreen.Q<Label>("player-score-label").text = "Your Score: " + points;
         }
 
+        private void OnDisplayPauseUI()
+        {
+            _pauseScreen.style.display = DisplayStyle.Flex;
+        }
+        
+        private void OnHidePauseUI()
+        {
+            _pauseScreen.style.display = DisplayStyle.None;
+        }
+
         private void LoadMainMenu()
         {
             SceneManager.LoadSceneAsync("Menu");
@@ -72,6 +105,8 @@ namespace Scripts.Managers
             SetShotClock -= OnSetShotClock;
             DisplayEndUI -= OnDisplayEndUI;
             SetStyleSheet -= OnSetStyleSheet;
+            DisplayPauseUI -= OnDisplayPauseUI;
+            HidePauseUI -= OnHidePauseUI;
         }
     }
 }
