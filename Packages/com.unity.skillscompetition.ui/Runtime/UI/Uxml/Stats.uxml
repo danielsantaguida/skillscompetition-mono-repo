@@ -1,10 +1,17 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="../Styles/Stats.uss" />
     <ui:Template name="EndPage" src="EndPage.uxml" />
-    <ui:VisualElement class="stats-screen">
-        <ui:Label class="shot-clock"/>
+    <ui:VisualElement class="stats-screen">\
+        <ui:VisualElement class="pause-container" name="pause-container">
+            <ui:Button name="pause-button" class="pause-button"/>
+        </ui:VisualElement>
+        <ui:Label class="shot-clock" name="placeholder"/>
         <ui:Label name="shot-clock" text="24" class="shot-clock"/>
         <ui:Label name="points-label" text="Points: 99" class="points-label"/>
+    </ui:VisualElement>
+    <ui:VisualElement class="pause-screen theme" name="pause-screen" style="display: none">
+        <ui:Label text="Pause Menu" class="pause-label"/>
+        <ui:Button text="Resume" name="resume-button" class="resume-button theme"/>
     </ui:VisualElement>
     <ui:Instance template="EndPage" name="end-page" class="end-screen" style="display: none;"/>
 </ui:UXML>

@@ -1,17 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 namespace Scripts.Managers
 {
+    [Obsolete("Replaced with GameStateManager.cs")]
     public class GameManager : MonoBehaviour
     {
 
