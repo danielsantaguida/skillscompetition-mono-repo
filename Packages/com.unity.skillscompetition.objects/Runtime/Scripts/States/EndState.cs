@@ -21,8 +21,6 @@ namespace Scripts.States
             
             CameraController.SetCursorLock(false, true, CursorLockMode.None);
             
-            DisableInputActions();
-
             ThemeManager.ClearTheme();
             
             DestroyAssets();
@@ -38,12 +36,6 @@ namespace Scripts.States
         {
         }
 
-        private void DisableInputActions()
-        {
-            Context.mFireAction.Disable();
-            Context.mLookAction.Disable();
-        }
-        
         private void DestroyAssets()
         {
             Addressables.ReleaseInstance(Context.mBasketball.gameObject);

@@ -1,3 +1,4 @@
+using Cinemachine;
 using Scripts.States;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -21,6 +22,9 @@ namespace Scripts.Managers
         public InputAction mFireAction;
         public InputAction mLookAction;
         public InputAction mPauseAction;
+
+        public CinemachineDollyCart dollyCart;
+        public CinemachineVirtualCamera trackVirtualCamera;
         
         void Start()
         {

@@ -21,7 +21,6 @@ namespace Scripts.States
             UIManager.DisplayPauseUI();
             UIManager.ResumeGame += OnResumeGame;
             Context.mPauseAction.performed += OnResumeGame;
-            DisableInputActions();
         }
 
         public override void Update()
@@ -34,19 +33,6 @@ namespace Scripts.States
             UIManager.HidePauseUI();
             UIManager.ResumeGame -= OnResumeGame;
             Context.mPauseAction.performed -= OnResumeGame;
-            EnableInputActions();
-        }
-        
-        private void EnableInputActions()
-        {
-            Context.mFireAction.Enable();
-            Context.mLookAction.Enable();
-        }
-        
-        private void DisableInputActions()
-        {
-            Context.mFireAction.Disable();
-            Context.mLookAction.Disable();
         }
 
         private void OnResumeGame(InputAction.CallbackContext ctx)
