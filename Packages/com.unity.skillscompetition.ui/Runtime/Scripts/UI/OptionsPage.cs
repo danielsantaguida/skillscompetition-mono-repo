@@ -9,6 +9,7 @@ using UnityEngine.Rendering;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Toggle = UnityEngine.UIElements.Toggle;
 
 namespace Scripts.UI
 {
@@ -20,12 +21,14 @@ namespace Scripts.UI
         public const string PlayerPrefsSensitivityKey = "sensitivity";
         public const string PlayerPrefsQualityKey = "quality";
         public const string PlayerPrefsThemeKey = "theme";
+        public const string PlayerPrefsCutsceneKey = "disableCutscene";
         
         private VisualElement _mSaveButton;
         private SliderInt _mVolumeSlider;
         private SliderInt _mSensitivitySlider;
         private DropdownField _mQualityDropdown;
         private DropdownField _mThemeDropdown;
+        private Toggle _mCutsceneToggle;
 
         private readonly List<string> _mThemeChoices;
 
@@ -55,7 +58,8 @@ namespace Scripts.UI
             _mSensitivitySlider = this.Q<SliderInt>("sensitivity-slider");
             _mQualityDropdown = this.Q<DropdownField>("quality-dropdown");
             _mThemeDropdown = this.Q<DropdownField>("theme-dropdown");
-
+            _mCutsceneToggle = this.Q<Toggle>("cutscene-toggle");
+            
             SetOptions();
 
             _mSaveButton?.RegisterCallback<ClickEvent>(ev => SaveOptions());
@@ -75,6 +79,9 @@ namespace Scripts.UI
             if (!PlayerPrefs.HasKey(PlayerPrefsThemeKey))
                 PlayerPrefs.SetString(PlayerPrefsThemeKey, _mThemeChoices[0]);
             
+            if (!PlayerPrefs.HasKey(PlayerPrefsCutsceneKey))
+                PlayerPrefs.SetInt(PlayerPrefsCutsceneKey, 0);
+            
             PlayerPrefs.Save();
         }
         
@@ -84,6 +91,7 @@ namespace Scripts.UI
             PlayerPrefs.SetInt(PlayerPrefsSensitivityKey, _mSensitivitySlider.value);
             PlayerPrefs.SetString(PlayerPrefsQualityKey, _mQualityDropdown.value);
             PlayerPrefs.SetString(PlayerPrefsThemeKey, _mThemeDropdown.value);
+            PlayerPrefs.SetInt(PlayerPrefsCutsceneKey, _mCutsceneToggle.value ? 1 : 0);
 
             LoadQualityAsset(_mQualityDropdown.value);
 
@@ -111,6 +119,9 @@ namespace Scripts.UI
             //Theme options
             _mThemeDropdown.choices = _mThemeChoices;
             _mThemeDropdown.value = PlayerPrefs.GetString(PlayerPrefsThemeKey);
+            
+            //Cutscene Options
+            _mCutsceneToggle.value =  PlayerPrefs.GetInt(PlayerPrefsCutsceneKey) == 1;
         }
 
         private void LoadQualityAsset(string qualitySetting)

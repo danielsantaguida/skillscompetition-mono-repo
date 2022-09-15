@@ -38,7 +38,7 @@ namespace Scripts.States
         public override void Update()
         {
             if (_isBallDone && _isTargetDone)
-                Context.SwitchState(new PlayState(Context));
+                Context.SwitchState(new CutsceneState(Context));
         }
 
         public override void Exit()
@@ -82,9 +82,6 @@ namespace Scripts.States
             Context.mPauseAction = new InputAction(binding: "<Keyboard>/escape");
             
             Context.mLookAction.performed += ctx => CameraController.Look(ctx);
-            Context.mPauseAction.Enable();
-            Context.mLookAction.Enable();
-            Context.mFireAction.Enable();
         }
     }
 }

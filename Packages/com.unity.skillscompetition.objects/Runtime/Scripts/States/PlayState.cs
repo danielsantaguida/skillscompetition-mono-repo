@@ -22,6 +22,10 @@ namespace Scripts.States
             UIManager.PauseGame += PauseGame;
 #endif
             _targetZoneBounds = Context.mTargetZone.bounds;
+            
+            Context.mPauseAction.Enable();
+            Context.mLookAction.Enable();
+            Context.mFireAction.Enable();
         }
         
         public override void Update()
@@ -36,6 +40,9 @@ namespace Scripts.States
 
         public override void Exit()
         {
+            Context.mLookAction.Disable();
+            Context.mFireAction.Disable();
+            
             Context.mPauseAction.performed -= PauseGame;
 #if PLATFORM_ANDROID
             UIManager.PauseGame -= PauseGame;

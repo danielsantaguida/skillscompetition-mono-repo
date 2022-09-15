@@ -5,7 +5,7 @@ VisualElement {
     background-image: url('project://database/Packages/com.unity.skillscompetition.ui/Runtime/UI/Textures/Button%20Frame%20WIDE%20Design%202.png?fileID=21300000&guid=301b7bf8103e03149ac660ac70969c58&type=3#Button Frame WIDE Design 2');
     background-color: rgba(255, 137, 0, 0.5);
     align-self: center;
-    height: 60%;
+    height: 70%;
     width: 30%;
     border-color: black;
     border-width: 2px;
@@ -22,7 +22,7 @@ VisualElement {
 .option-items {
     align-content: center;
     justify-content: center;
-    height: 75%;
+    height: 90%;
     margin-left: 20%;
     margin-right: 20%;
 }

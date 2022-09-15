@@ -3,6 +3,8 @@
     <Scripts.UI.OptionsPage name="options-page" class="options-page theme">
         <ui:Label text="Options" class="title"/>
         <ui:VisualElement class="option-items">
+            <ui:Label text="Disable Cutscene" class="item-label" />
+            <ui:Toggle name="cutscene-toggle" class="item" />
             <ui:Label text="Volume" class="item-label" />
             <ui:SliderInt name="volume-slider" class="item" />
             <ui:Label text="Sensitivity" class="item-label" />
