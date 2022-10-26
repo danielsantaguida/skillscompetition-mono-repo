@@ -17,16 +17,16 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: f101f7f5ded2135478c3b27cd419e95d
   m_SerializeEntries:
-  - m_GUID: d0e2fc18fe036412f8223b3b3d9ad574
+  - m_GUID: cb757978fd6dd9b4eba9eb577abb0bdf
     m_Address: Performant
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 7b7fd9122c28c4d15b667c7040e3b3fd
-    m_Address: HighFidelity
+  - m_GUID: f98be698c3069344592c896b34d7eb12
+    m_Address: Balanced
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: e1260c1148f6143b28bae5ace5e9c5d1
-    m_Address: Balanced
+  - m_GUID: 6050acf99e11ef64685b31e9e539f4ee
+    m_Address: HighFidelity
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

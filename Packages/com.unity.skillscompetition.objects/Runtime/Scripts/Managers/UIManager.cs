@@ -36,15 +36,15 @@ namespace Scripts.Managers
             _mEndScreen = m_UIDocument.rootVisualElement.Q("end-page");
             _pauseScreen = m_UIDocument.rootVisualElement.Q("pause-screen");
 
-#if PLATFORM_STANDALONE
-            var pauseContainer = m_UIDocument.rootVisualElement.Q("pause-container");
-            pauseContainer.style.display = DisplayStyle.None;
-#else
+#if PLATFORM_ANDROID
             var placeholder = m_UIDocument.rootVisualElement.Q("placeholder");
             placeholder.style.display = DisplayStyle.None;
                 
             var pauseButton = m_UIDocument.rootVisualElement.Q("pause-button");
             pauseButton.RegisterCallback<ClickEvent>(ev => PauseGame());
+#else
+            var pauseContainer = m_UIDocument.rootVisualElement.Q("pause-container");
+            pauseContainer.style.display = DisplayStyle.None;
 #endif
             
             _mEndScreen.Q<Button>("menu-button").RegisterCallback<ClickEvent>(ev => LoadMainMenu());
